@@ -1,0 +1,41 @@
+server:
+  port: 8088
+sharding:
+  jdbc: 
+    driverClassName: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 3
+    maxWait: 60000
+    minIdle: 3
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true   
+    maxPoolPreparedStatementPerConnectionSize: 20
+    removeAbandoned: true
+    removeAbandonedTimeout: 600
+    logAbandoned: false
+    connectionInitSqls: 
+    
+    masterUrl0: jdbc:mysql://193.112.78.237:3306/product?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    masterUsername0: admin
+    masterPassword0: jiatuimysql
+    
+    slaveUrl0: jdbc:mysql://193.112.78.237:3306/product_readone?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    slaveUsername0: admin
+    slavePassword0: jiatuimysql
+    
+    slaveUrl1: jdbc:mysql://193.112.78.237:3306/product_readtwo?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    slaveUsername1: admin
+    slavePassword1: jiatuimysql
+
+spring:
+  redis:
+    database: 0
+    host: 193.112.78.237
+    port: 6379
+    password: jiatuiredis
