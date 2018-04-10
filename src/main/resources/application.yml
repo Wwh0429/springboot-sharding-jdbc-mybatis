@@ -22,8 +22,8 @@ sharding:
     connectionInitSqls: 
     
     masterUrl0: jdbc:mysql://xxx.xxx.xxx.xxx:3306/product?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
-    masterUsername0: admin
-    masterPassword0: jiatuimysql
+    masterUsername0: root
+    masterPassword0: root
     
     slaveUrl0: jdbc:mysql://xxx.xxx.xxx.xxx:3306/product_readone?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     slaveUsername0: root
